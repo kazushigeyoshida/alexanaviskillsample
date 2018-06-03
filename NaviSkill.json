@@ -1,0 +1,105 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ナビ",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "POISearchIntent",
+                    "slots": [
+                        {
+                            "name": "fromPIOtype",
+                            "type": "POItype"
+                        },
+                        {
+                            "name": "fromSearchtype",
+                            "type": "Searchtype"
+                        }
+                    ],
+                    "samples": [
+                        "検索",
+                        "検索する",
+                        "検索して",
+                        "見つける",
+                        "見つけて",
+                        "探して",
+                        "探す",
+                        "{fromPIOtype} ",
+                        "{fromPIOtype} 検索",
+                        "{fromPIOtype} を検索",
+                        "{fromPIOtype} を探して",
+                        "{fromSearchtype} から検索",
+                        "{fromSearchtype} を検索",
+                        "{fromSearchtype} で検索",
+                        "{fromSearchtype} から {fromPIOtype} ",
+                        "{fromSearchtype} の {fromPIOtype} 検索",
+                        "{fromSearchtype} の {fromPIOtype} を検索",
+                        "{fromSearchtype} から {fromPIOtype} を検索",
+                        "{fromSearchtype} の {fromPIOtype} を探して",
+                        "{fromSearchtype} から {fromPIOtype} を探して",
+                        "教えて"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "POItype",
+                    "values": [
+                        {
+                            "id": "PARKING",
+                            "name": {
+                                "value": "駐車場",
+                                "synonyms": [
+                                    "パーキング"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "GASSTATION",
+                            "name": {
+                                "value": "給油所",
+                                "synonyms": [
+                                    "ガソリンスタンド",
+                                    "スタンド"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Searchtype",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "近く",
+                                "synonyms": [
+                                    "近所",
+                                    "付近"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "通り道",
+                                "synonyms": [
+                                    "ルート"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
